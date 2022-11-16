@@ -2,6 +2,7 @@
   "name": "evion",
   "version": "0.0.1",
   "dependencies": {
+    "embla-carousel-react": "^7.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
