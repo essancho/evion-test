@@ -1,13 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import classes from "../../styles/Filters/Filters.module.scss";
+import MultiSelectField from "../MultiSelectField/MultiSelectField";
 
-const Filters = (options: any) => {
+const Filters = ({ options }: any) => {
   const [filtersOpen, setFiltersOpen] = useState(false);
-
   const filtersIsOpen = filtersOpen ? classes.Filters_open : "";
-
   const filtersClasses = [classes.Filters, filtersIsOpen];
+
+  const [dataCars, setDataCars] = useState([]);
+
+  useEffect(() => {
+    const carsName = options.map((item: any) => ({
+      label: item.name,
+      value: item.id,
+    }));
+
+    setDataCars(carsName);
+  }, []);
 
   return (
     <div className={filtersClasses.join(" ")}>
@@ -17,7 +27,9 @@ const Filters = (options: any) => {
       >
         <p className={classes.Filters__title}>Filters</p>
       </button>
-      <div className="Filter__content"></div>
+      <div className={classes.Filters__content}>
+        <MultiSelectField placeholder="Car model" options={dataCars} />
+      </div>
     </div>
   );
 };

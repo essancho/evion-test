@@ -1,17 +1,25 @@
 .Filters {
   margin-bottom: 10px;
-  padding: 5px 10px;
+  padding: 0px 10px;
   background: #2d2d2d;
   box-shadow: 0px 4px 10px rgba(45, 45, 45, 0.15);
   border-radius: 10px;
+  cursor: pointer;
 
   &_open {
-    .Filter__title {
+    .Filters__title {
       color: #c53458;
+    }
+
+    .Filters__content {
+      height: auto;
+      opacity: 1;
+      visibility: visible;
     }
   }
 
   &__btn {
+    padding: 5px 0;
     width: 100%;
     color: #ffffff;
     font-family: "Montserrat";
@@ -20,5 +28,12 @@
     line-height: 16px;
     background: transparent;
     border: none;
+    cursor: pointer;
+  }
+
+  &__content {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
   }
 }
