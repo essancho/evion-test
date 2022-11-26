@@ -5,6 +5,7 @@ import { CARS } from "../../helpers/const";
 import CarItem from "../CarItem/CarItem";
 
 import classes from "../../styles/basic/BasicStyles.module.scss";
+import Filters from "../Filters/Filters";
 
 const CarShop: React.FC = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -31,6 +32,7 @@ const CarShop: React.FC = () => {
               />
             </label>
           </div>
+          <Filters options={CARS} />
           {searchedCars.map((item) => (
             <CarItem
               key={`${item.id}_${item.name}_${item.model}`}

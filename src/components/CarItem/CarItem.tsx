@@ -20,7 +20,7 @@ const CarItem = ({ option }: CarProps) => {
     <>
       <div className={carItemClasses.join(" ")}>
         <button
-          className={classes.CarItem__top}
+          className={classes.CarItem__btn}
           onClick={() => SetOpenPanel((prev) => !prev)}
         >
           <p className={classes.CarItem__title}>

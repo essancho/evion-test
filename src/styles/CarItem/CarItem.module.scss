@@ -20,7 +20,7 @@
       visibility: visible;
     }
 
-    .CarItem__top {
+    .CarItem__btn {
       &:before {
         content: "";
         position: absolute;
@@ -34,7 +34,7 @@
     }
   }
 
-  &__top {
+  &__btn {
     display: flex;
     align-items: center;
     justify-content: space-between;

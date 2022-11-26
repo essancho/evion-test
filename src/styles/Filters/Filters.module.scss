@@ -1,0 +1,23 @@
+.Filters {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background: #2d2d2d;
+  box-shadow: 0px 4px 10px rgba(45, 45, 45, 0.15);
+  border-radius: 10px;
+
+  &_open {
+    .Filter__title {
+      color: #c53458;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    background: transparent;
+    border: none;
+  }
+}
