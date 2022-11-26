@@ -1,8 +1,6 @@
 import React from "react";
 import Select, { StylesConfig, components } from "react-select";
 
-import "../../styles/MultiSelectField/MultiSelectField.css";
-
 interface Props {
   placeholder: string;
   options: any;
