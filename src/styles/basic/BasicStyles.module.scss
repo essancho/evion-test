@@ -58,3 +58,39 @@
     }
   }
 }
+
+.RangeInputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 3px;
+    background: #373737;
+    transform: translate(-50%, -50%);
+  }
+
+  input {
+    width: 38%;
+    padding: 10px;
+    background: #373737;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(45, 45, 45, 0.15);
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+    &:placeholder {
+      color: #5a5a5a;
+    }
+  }
+}

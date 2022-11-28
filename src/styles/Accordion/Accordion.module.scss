@@ -1,0 +1,72 @@
+.Accordion {
+  margin-top: 10px;
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    cursor: auto;
+
+    &_open {
+      .Accordion__content {
+        margin-bottom: 10px;
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .Accordion__btn {
+        span {
+          &:before {
+            transform: translateY(-50%) rotate(180deg);
+          }
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #393939;
+    }
+  }
+
+  &__btn {
+    padding: 15px 0;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-family: "Montserrat";
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: start;
+    cursor: pointer;
+
+    span {
+      display: block;
+      position: relative;
+      width: 100%;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 15px;
+        height: 15px;
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.75 5.62506L7.5 9.37506L11.25 5.62506' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: translateY(-50%);
+        transition: 0.3s ease transform;
+      }
+    }
+  }
+
+  &__content {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}

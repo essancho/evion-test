@@ -254,3 +254,12 @@ export const CARS: ICar[] = [
     maxSpeed: 250,
   },
 ];
+
+export const PARAMETERS_CARS = [
+  { id: 1, name: "Mileage" },
+  { id: 2, name: "Max Speed" },
+  { id: 3, name: "Capacity" },
+  { id: 4, name: "Permadamage" },
+  { id: 5, name: "Acceleration" },
+  { id: 6, name: "Braking" },
+];

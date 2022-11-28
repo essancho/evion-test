@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 import classes from "../../styles/Filters/Filters.module.scss";
+import { PARAMETERS_CARS } from "../../helpers/const";
+
+import Accordion from "../Accordion/Accordion";
 import MultiSelectField from "../MultiSelectField/MultiSelectField";
 
 const Filters = ({ options }: any) => {
@@ -29,6 +32,7 @@ const Filters = ({ options }: any) => {
       </button>
       <div className={classes.Filters__content}>
         <MultiSelectField placeholder="Car model" options={dataCars} />
+        <Accordion parameters={PARAMETERS_CARS} />
       </div>
     </div>
   );
