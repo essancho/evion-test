@@ -4,6 +4,7 @@
   left: 78px;
   padding: 20px 25px 20px 15px;
   width: 22.5%;
+  max-height: 925px;
   border-radius: 15px;
   background-image: url("../../assets/bg-card.png");
   background-repeat: no-repeat;
@@ -11,6 +12,7 @@
   filter: drop-shadow(0px 4px 10px rgba(197, 52, 88, 0.1));
 
   &__list {
+    max-height: 805px;
     overflow-y: auto;
     overflow-x: hidden;
     margin-right: -13px;

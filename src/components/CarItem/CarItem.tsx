@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, CSSProperties } from "react";
 
 import { ICar } from "../../models";
 
@@ -16,6 +16,10 @@ const CarItem = ({ option }: CarProps) => {
 
   const carItemClasses = [classes.CarItem, carItemClassIsOpen];
 
+  const isOpenPanelStyle = {
+    display: openPanel ? "block" : "none",
+  };
+
   return (
     <>
       <div className={carItemClasses.join(" ")}>
@@ -29,7 +33,7 @@ const CarItem = ({ option }: CarProps) => {
           </p>
           <span className={classes.CarItem__price}>{option.price} $</span>
         </button>
-        <div className={classes.CarItem__panel}>
+        <div className={classes.CarItem__panel} style={isOpenPanelStyle}>
           <p className={classes.CarItem__panel_title}>Color options</p>
           <EmblaCarousel slides={option.colors} />
         </div>

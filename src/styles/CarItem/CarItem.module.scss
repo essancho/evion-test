@@ -1,8 +1,8 @@
 .CarItem {
   background: #2d2d2d;
+  border-radius: 10px;
   opacity: 0.95;
   box-shadow: 0px 4px 10px rgba(45, 45, 45, 0.15);
-  border-radius: 10px;
 
   &:not(:last-child) {
     margin-bottom: 15px;
@@ -11,13 +11,6 @@
   &_openPanel {
     .CarItem__title {
       color: #c53458;
-    }
-
-    .CarItem__panel {
-      padding: 10px;
-      height: auto;
-      opacity: 1;
-      visibility: visible;
     }
 
     .CarItem__btn {
@@ -64,9 +57,8 @@
   }
 
   &__panel {
-    height: 0;
-    opacity: 0;
-    visibility: hidden;
+    display: none;
+    padding: 10px;
 
     &_title {
       color: #ffffff;
