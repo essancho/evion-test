@@ -33,12 +33,14 @@ const CarShop: React.FC = () => {
             </label>
           </div>
           <Filters options={CARS} />
-          {searchedCars.map((item) => (
-            <CarItem
-              key={`${item.id}_${item.name}_${item.model}`}
-              option={item}
-            />
-          ))}
+          <div className={classes.ModalWrapper__list}>
+            {searchedCars.map((item) => (
+              <CarItem
+                key={`${item.id}_${item.name}_${item.model}`}
+                option={item}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </>
